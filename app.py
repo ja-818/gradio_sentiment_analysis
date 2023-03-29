@@ -23,3 +23,9 @@ def predict(user_input):
         prediction = "Neutral"  
 
     return prediction
+
+# Create gradio app structure
+app = gr.Interface(fn=model_predict, inputs="text", outputs="text")
+
+# Launch gradio app
+app.launch()
