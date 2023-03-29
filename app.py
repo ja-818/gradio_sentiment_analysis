@@ -1,6 +1,11 @@
 import gradio as gr
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
+# Main app function
+def model_predict(sentence):
+    prediction = predict(sentence)
+    return prediction
+
 # Model logic
 def predict(user_input):
     sid_obj = SentimentIntensityAnalyzer()
